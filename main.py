@@ -10,10 +10,9 @@ class Config:
 
 class Offsets:
     def offset(a):
-        return get("https://raw.githubusercontent.com/a2x/cs2-dumper/main/generated/offsets.json").json()['client_dll']['data'][a]['value']
-
+        return get("https://raw.githubusercontent.com/a2x/cs2-dumper/main/output/offsets.json").json()["client.dll"][a]
     def client(a, b):
-        return get("https://raw.githubusercontent.com/a2x/cs2-dumper/main/generated/client.dll.json").json()[a]['data'][b]['value']
+        return get("https://raw.githubusercontent.com/a2x/cs2-dumper/main/output/client.dll.json").json()["client.dll"]["classes"][a]["fields"][b]
 
     dwEntityList = offset("dwEntityList")
     dwLocalPlayerPawn = offset("dwLocalPlayerPawn")
